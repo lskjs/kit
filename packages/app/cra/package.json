@@ -1,0 +1,27 @@
+{
+  "name": "init",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "17.0.1",
+    "react-app-rewired": "2.1.8",
+    "react-dom": "17.0.1",
+    "react-scripts": "4.0.1"
+  },
+  "proxy": "http://localhost:8080",
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "resolutions": {
+    "fsevents": "*"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

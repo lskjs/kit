@@ -1,0 +1,48 @@
+include:
+  - project: devops/test
+    file: /lskjs/workflow.yml
+
+build:
+  variables:
+    NODE_OPTIONS: --max_old_space_size=8000
+
+
+.deploy-dev:
+  variables:
+    VIRTUAL_HOST: Host(`dev-kit.lskjs.ru`)
+  environment:
+    name: dev
+    url: https://dev-kit.lskjs.ru
+
+
+.deploy-prod:
+  variables:
+    VIRTUAL_HOST: Host(`kit.lskjs.ru`) || Host(`bratishkabot.ru`)
+    DOCKER_SERVICE: prod_${CI_PROJECT_PATH_SLUG}
+  environment:
+    name: prod
+    url: https://kit.lskjs.ru
+
+
+# WakeUp bot
+
+.deploy-wakeup:
+  variables:
+    VIRTUAL_HOST: Host(`wakeup.lskjs.ru`)
+    DOCKER_SERVICE: prod_${CI_PROJECT_PATH_SLUG}
+  environment:
+    name: wakeup
+    url: https://wakeup.lskjs.ru
+
+deploy-wakeup-manual:
+  extends: 
+    - .deploy-prod
+    - .deploy-wakeup
+    - .deploy-prod-manual-rule
+  when: manual
+
+deploy-wakeup:
+  extends: 
+    - .deploy-prod
+    - .deploy-wakeup
+    - .deploy-prod-rule
