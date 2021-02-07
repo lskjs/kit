@@ -3,10 +3,10 @@
 //   ...require('../lskjs/bots/stores').default(...args),
 //   UserStore: require('./UserStore').default(...args),
 // });
-import botStores from '../lskjs/bots/stores';
+// import botStores from '../lskjs/bots/stores';
 
 export default {
   // ...require('@lskjs/mobx/stores').default,
-  ...botStores,
+  // ...botStores,
   UserStore: () => import('./UserStore'),
 };

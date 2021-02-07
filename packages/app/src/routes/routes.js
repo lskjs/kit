@@ -14,14 +14,14 @@ export default {
       path: '',
       ...require('./home').default,
     },
-    {
-      path: '/auth',
-      ...require('./auth').default,
-    },
-    {
-      path: '/cabinet',
-      ...require('./cabinet').default,
-    },
+    // {
+    //   path: '/auth',
+    //   ...require('./auth').default,
+    // },
+    // {
+    //   path: '/cabinet',
+    //   ...require('./cabinet').default,
+    // },
     // {
     //   path: '/admin',
     //   ...require('./admin').default,
