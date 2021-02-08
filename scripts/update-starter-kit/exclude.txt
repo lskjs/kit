@@ -1,7 +1,8 @@
 packages/
-todo/
+.storybook/node_modules/
 node_modules/
 .idea
+.cache
 .git
 .lskjs.js
 coverage
@@ -10,4 +11,5 @@ README.md
 CHANGELOG.md
 .all-contributorsrc
 .env.*
+__*
 scripts/release-after-hook.sh
