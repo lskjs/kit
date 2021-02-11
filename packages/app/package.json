@@ -2,23 +2,15 @@
   "scripts": {
     "start": "lsk run start",
     "dev": "lsk run dev",
-    "dev:server": "lsk run dev:server",
-    "dev:cra": "lsk run dev:cra",
-    "dev:cra-and-server": "lsk run dev:cra-and-server",
-    "postversion": "lsk run postversion",
-    "lint:js": "lsk run lint:js",
     "bootstrap": "lsk run bootstrap",
-    "update": "lsk run update",
     "build": "lsk run build",
     "watch": "lsk run watch",
-    "bump": "lsk run bump",
     "release": "lsk run release",
-    "release:docs": "lsk run release:docs",
     "storybook": "lsk run storybook",
     "i18": "lsk run i18",
     "server": "node index.server.js",
     "server:dev": "../../node_modules/nodemon/bin/nodemon.js --delay 0.5 index.server.js | ../../node_modules/@lskjs/log/bin/cli.js -o short -l trace",
-    "lsk": "lsk"
+    "test": "lsk run test"
   },
   "dependencies": {
     "@babel/core": "7.12.10",
@@ -70,7 +62,7 @@
     "@lskjs/ui": "^1.36.11",
     "@lskjs/ui2": "2.0.0-beta.2",
     "@lskjs/upload": "2.2.0-beta.20",
-    "@lskjs/utils": "2.2.0-beta.20",
+    "@lskjs/utils": "2.2.0-beta.21",
     "antd": "4.11.1",
     "axios": "0.21.1",
     "babel-plugin-dynamic-import-node": "2.3.3",

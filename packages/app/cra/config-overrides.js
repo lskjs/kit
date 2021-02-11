@@ -14,23 +14,21 @@ module.exports = function override(config) {
       item.test = /\.(jsx?|mjs)$/;
       item.options = {
         ...item.options,
-        configFile: require('path').resolve(__dirname, '../../../.babelrc.js'),
+        configFile: require('path').resolve(__dirname, '../.babelrc.js'),
       };
     } else {
       // Babel loader with runtime
       item.options = {
         ...item.options,
-        configFile: require('path').resolve(__dirname, '../../../.babelrc.js'),
+        configFile: require('path').resolve(__dirname, '../.babelrc.js'),
       };
     }
     // console.log('AFTER', item)
   });
 
   config.plugins.forEach((item) => {
-    // console.log('BEFORE', item)
     if (!item.eslintPath) return;
     item.baseConfig = require('../../../.eslintrc.js');
-    // console.log('AFTER', item)
   });
 
   return config;
